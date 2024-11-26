@@ -1,0 +1,45 @@
+{
+  "name": "js-frameworks-ca",
+  "private": true,
+  "version": "0.0.0",
+  "description": "An e-commerce site developed as the course assignment in the JavaScript Frameworks course at Noroff",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src/**/*.{js,jsx}",
+    "lint-fix": "eslint src/**/*.{js,jsx} --cache --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aklevjer/js-frameworks-ca.git"
+  },
+  "keywords": [
+    "React",
+    "TailwindCSS",
+    "Vite"
+  ],
+  "author": "Aleksander Klevjer <alekle53052@stud.noroff.no>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aklevjer/js-frameworks-ca/issues"
+  },
+  "homepage": "https://github.com/aklevjer/js-frameworks-ca#readme",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "eslint": "^9.13.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "globals": "^15.11.0",
+    "vite": "^5.4.10"
+  }
+}

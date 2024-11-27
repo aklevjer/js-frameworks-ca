@@ -62,26 +62,17 @@ export default {
       maxWidth: {
         prose: "45ch",
       },
-      strokeWidth: {
-        0.5: "0.5",
-      },
     },
   },
   plugins: [
-    function ({ addUtilities, theme }) {
+    function ({ addUtilities }) {
       addUtilities(
         {
           ".overflow-wrap-anywhere": {
             overflowWrap: "anywhere",
           },
-          ".text-stroke-transparent": {
-            WebkitTextStroke: "0.4px transparent",
-          },
-          ".text-stroke-neutral-900": {
-            WebkitTextStroke: "0.4px " + theme("colors.neutral.900"),
-          },
         },
-        ["responsive", "hover"]
+        ["responsive", "hover"],
       );
     },
   ],

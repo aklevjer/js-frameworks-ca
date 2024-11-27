@@ -62,6 +62,9 @@ export default {
       maxWidth: {
         prose: "45ch",
       },
+      boxShadow: {
+        bottom: "0px 75px 100px rgba(0, 0, 0, 0.1)",
+      },
     },
   },
   plugins: [

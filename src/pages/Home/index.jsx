@@ -5,13 +5,15 @@ import { sortByOrder } from "../../utils/product/sortByOrder";
 
 import SearchBar from "../../components/ui/SearchBar";
 import SortSelect from "../../components/ui/SortSelect";
+import Loader from "../../components/ui/Loader";
+import ErrorMessage from "../../components/ui/ErrorMessage";
 import ProductList from "../../components/product/ProductList";
 
 export default function Home() {
   const { products, isLoading, isError } = useProducts();
+  const disabledState = isLoading || isError;
   const [searchQuery, setSearchQuery] = useState("");
   const [sortOrder, setSortOrder] = useState("default");
-  const disabledState = isLoading || isError;
 
   const filteredProducts = useMemo(() => {
     if (products) {
@@ -33,14 +35,14 @@ export default function Home() {
         <SortSelect onSort={setSortOrder} disabled={disabledState} />
       </div>
 
-      {isLoading && <p>Loading...</p>}
+      {isLoading && <Loader />}
 
-      {isError && <p>Oops! Failed to load products. Please try again later.</p>}
+      {isError && <ErrorMessage message="Oops! Failed to load products. Please try again later." />}
 
       {searchQuery && (
         <p className="mb-6 flex gap-1">
           Found {filteredProducts.length} result{filteredProducts.length !== 1 ? "s" : ""} for
-          <strong className="overflow-wrap-anywhere">‘{searchQuery}’</strong>
+          <span className="font-bold overflow-wrap-anywhere">‘{searchQuery}’</span>
         </p>
       )}
 

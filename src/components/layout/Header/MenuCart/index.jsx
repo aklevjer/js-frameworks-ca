@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { BiMenu, BiX, BiShoppingBag } from "react-icons/bi";
+import { useCartStore } from "../../../../store/cartStore";
 
 export default function MenuCart({ isMenuOpen, setIsMenuOpen }) {
+  const itemsCount = useCartStore((state) => state.getItemsCount());
+
   const handleToggleMenu = (event) => {
     event.stopPropagation();
     setIsMenuOpen((prev) => !prev);
@@ -15,7 +18,7 @@ export default function MenuCart({ isMenuOpen, setIsMenuOpen }) {
         onClick={handleToggleMenu}
         className="md:hidden"
       >
-        {isMenuOpen ? <BiX size="28" /> : <BiMenu size="28" />}
+        {isMenuOpen ? <BiX size={28} /> : <BiMenu size={28} />}
       </button>
 
       <Link
@@ -24,7 +27,7 @@ export default function MenuCart({ isMenuOpen, setIsMenuOpen }) {
       >
         <BiShoppingBag size={18} />
         <span className="sr-only md:not-sr-only">Cart</span>
-        <span>(0)</span>
+        <span>({itemsCount})</span>
       </Link>
     </div>
   );

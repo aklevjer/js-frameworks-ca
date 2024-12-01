@@ -1,3 +1,4 @@
+import { useCartStore } from "../../../store/cartStore";
 import { useQuantity } from "../../../hooks/useQuantity";
 import { isDiscounted } from "../../../utils/product/isDiscounted";
 import { getDiscountPercent } from "../../../utils/product/getDiscountPercent";
@@ -9,6 +10,7 @@ import QuantityControl from "../QuantityControl";
 import Reviews from "../Reviews";
 
 export default function SingleProduct({ product }) {
+  const addToCart = useCartStore((state) => state.addToCart);
   const { quantity, increase, decrease } = useQuantity();
   const { title, description, price, discountedPrice, image, rating, reviews } = product;
 
@@ -16,6 +18,10 @@ export default function SingleProduct({ product }) {
   const discountPercent = getDiscountPercent(price, discountedPrice);
   const formattedPrice = formatPrice(price);
   const formattedDiscountPrice = formatPrice(discountedPrice);
+
+  const handleAddToCart = () => {
+    addToCart(product, quantity);
+  };
 
   return (
     <div className="grid gap-6 md:grid-cols-2">
@@ -58,7 +64,7 @@ export default function SingleProduct({ product }) {
 
         <div className="flex flex-wrap gap-4">
           <QuantityControl quantity={quantity} onIncrease={increase} onDecrease={decrease} />
-          <Button variant="primary" className="py-3">
+          <Button variant="primary" onClick={handleAddToCart} className="py-3">
             Add to Cart
           </Button>
         </div>

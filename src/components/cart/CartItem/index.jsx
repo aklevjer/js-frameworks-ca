@@ -1,6 +1,6 @@
 import { BiTrash } from "react-icons/bi";
 import { useCartStore } from "../../../store/cartStore";
-import { formatPrice } from "../../../utils/product/formatPrice";
+import { formatPrice } from "../../../utils/misc/formatPrice";
 import QuantityControl from "../../product/QuantityControl";
 
 export default function CartItem({ cartItem }) {

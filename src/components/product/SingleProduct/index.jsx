@@ -2,7 +2,7 @@ import { useCartStore } from "../../../store/cartStore";
 import { useQuantity } from "../../../hooks/useQuantity";
 import { isDiscounted } from "../../../utils/product/isDiscounted";
 import { getDiscountPercent } from "../../../utils/product/getDiscountPercent";
-import { formatPrice } from "../../../utils/product/formatPrice";
+import { formatPrice } from "../../../utils/misc/formatPrice";
 
 import Button from "../../ui/Button";
 import StarRating from "../StarRating";

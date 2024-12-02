@@ -1,5 +1,5 @@
 import { useCartStore } from "../../store/cartStore";
-import { formatPrice } from "../../utils/product/formatPrice";
+import { formatPrice } from "../../utils/misc/formatPrice";
 
 import EmptyCart from "../../components/cart/EmptyCart";
 import CartReview from "../../components/cart/CartReview";

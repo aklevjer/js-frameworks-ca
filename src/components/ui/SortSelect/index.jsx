@@ -5,7 +5,7 @@ export default function SortSelect({ onSort, disabled }) {
   };
 
   return (
-    <div className="space-y-2 sm:basis-52">
+    <div className="space-y-2 has-[:disabled]:opacity-60 sm:basis-52">
       <label htmlFor="sort" className="text-m font-medium">
         Sort by
       </label>
@@ -14,7 +14,7 @@ export default function SortSelect({ onSort, disabled }) {
         id="sort"
         onChange={handleSort}
         disabled={disabled}
-        className="w-full rounded-md border-r-8 border-r-transparent bg-white p-2 outline-none ring-1 ring-neutral-500 focus:ring-2 focus:ring-neutral-900 disabled:opacity-60"
+        className="w-full rounded-md border-r-8 border-r-transparent bg-white p-2 outline-none ring-1 ring-neutral-500 focus:ring-2 focus:ring-neutral-900"
       >
         <option value="default">Default</option>
         <option value="title-asc">Name (A-Z)</option>

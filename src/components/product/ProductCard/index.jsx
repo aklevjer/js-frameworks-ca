@@ -43,7 +43,7 @@ export default function ProductCard({ product }) {
           asLink
           variant="primary"
           path={`/product/${id}`}
-          className={"mt-2 text-center text-sm"}
+          className="mt-2 text-center text-sm"
         >
           View Product
         </Button>

@@ -30,7 +30,7 @@ export default function CartItem({ cartItem }) {
               className="flex items-center gap-1 text-m font-semibold text-neutral-600 transition-colors hover:text-neutral-900"
             >
               <BiTrash size={18} />
-              Remove
+              <span>Remove</span>
             </button>
           </div>
         </div>

@@ -2,7 +2,7 @@ import { ScrollRestoration, Outlet } from "react-router-dom";
 import Header from "../Header";
 import Footer from "../Footer";
 
-export default function Root() {
+export default function Layout() {
   return (
     <>
       <ScrollRestoration />

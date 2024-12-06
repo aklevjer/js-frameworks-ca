@@ -1,12 +1,15 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useAlert } from "../../../hooks/useAlert";
 import { contactSchema } from "../../../utils/schemas/contactSchema";
 
 import TextInput from "../../ui/TextInput";
 import Textarea from "../../ui/Textarea";
 import Button from "../../ui/Button";
+import Alert from "../../ui/Alert";
 
 export default function ContactForm() {
+  const { alertMessage, showAlert } = useAlert();
   const {
     register,
     handleSubmit,
@@ -16,6 +19,7 @@ export default function ContactForm() {
 
   const onSubmit = (formData) => {
     console.log("Contact form data:", formData);
+    showAlert("Your message was sent!");
     reset();
   };
 
@@ -66,6 +70,8 @@ export default function ContactForm() {
         <Button variant="primary" type="submit" className="w-full">
           Send Message
         </Button>
+
+        {alertMessage && <Alert type="success" message={alertMessage} />}
       </form>
     </section>
   );

@@ -4,7 +4,7 @@ import { useProductById } from "../../hooks/useProductById";
 
 import Button from "../../components/ui/Button";
 import Loader from "../../components/ui/Loader";
-import ErrorMessage from "../../components/ui/ErrorMessage";
+import Alert from "../../components/ui/Alert";
 import SingleProduct from "../../components/product/SingleProduct";
 
 export default function ProductDetails() {
@@ -19,7 +19,9 @@ export default function ProductDetails() {
       </Button>
 
       {isLoading && <Loader />}
-      {isError && <ErrorMessage message="Oops! Failed to load product. Please try again later." />}
+      {isError && (
+        <Alert type="error" message="Oops! Failed to load product. Please try again later." />
+      )}
       {product && <SingleProduct product={product} />}
     </section>
   );

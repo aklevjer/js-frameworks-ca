@@ -1,17 +1,20 @@
 import { useCartStore } from "../../../store/cartStore";
 import { useQuantity } from "../../../hooks/useQuantity";
+import { useAlert } from "../../../hooks/useAlert";
 import { isDiscounted } from "../../../utils/product/isDiscounted";
 import { getDiscountPercent } from "../../../utils/product/getDiscountPercent";
 import { formatPrice } from "../../../utils/misc/formatPrice";
 
-import Button from "../../ui/Button";
 import StarRating from "../StarRating";
 import QuantityControl from "../QuantityControl";
 import Reviews from "../Reviews";
+import Button from "../../ui/Button";
+import Alert from "../../ui/Alert";
 
 export default function SingleProduct({ product }) {
   const addToCart = useCartStore((state) => state.addToCart);
   const { quantity, increase, decrease } = useQuantity();
+  const { alertMessage, showAlert } = useAlert();
   const { title, description, price, discountedPrice, image, rating, reviews } = product;
 
   const isDiscount = isDiscounted(price, discountedPrice);
@@ -21,6 +24,7 @@ export default function SingleProduct({ product }) {
 
   const handleAddToCart = () => {
     addToCart(product, quantity);
+    showAlert(`${title} added to cart!`);
   };
 
   return (
@@ -62,11 +66,15 @@ export default function SingleProduct({ product }) {
 
         <hr className="my-6 border-neutral-200" />
 
-        <div className="flex flex-wrap gap-4">
-          <QuantityControl quantity={quantity} onIncrease={increase} onDecrease={decrease} />
-          <Button variant="primary" onClick={handleAddToCart} className="py-3">
-            Add to Cart
-          </Button>
+        <div className="space-y-4">
+          <div className="flex flex-wrap gap-4">
+            <QuantityControl quantity={quantity} onIncrease={increase} onDecrease={decrease} />
+            <Button variant="primary" onClick={handleAddToCart} className="py-3">
+              Add to Cart
+            </Button>
+          </div>
+
+          {alertMessage && <Alert type="success" message={alertMessage} />}
         </div>
       </div>
 

@@ -6,7 +6,7 @@ import { sortByOrder } from "../../utils/product/sortByOrder";
 import SearchBar from "../../components/ui/SearchBar";
 import SortSelect from "../../components/ui/SortSelect";
 import Loader from "../../components/ui/Loader";
-import ErrorMessage from "../../components/ui/ErrorMessage";
+import Alert from "../../components/ui/Alert";
 import ProductList from "../../components/product/ProductList";
 
 export default function Home() {
@@ -37,7 +37,9 @@ export default function Home() {
 
       {isLoading && <Loader />}
 
-      {isError && <ErrorMessage message="Oops! Failed to load products. Please try again later." />}
+      {isError && (
+        <Alert type="error" message="Oops! Failed to load products. Please try again later." />
+      )}
 
       {searchQuery && (
         <p className="mb-6 flex gap-1">

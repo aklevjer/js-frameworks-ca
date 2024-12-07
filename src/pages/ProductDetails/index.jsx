@@ -24,9 +24,11 @@ export default function ProductDetails() {
         </Button>
 
         {isLoading && <Loader />}
+
         {isError && (
           <Alert type="error" message="Oops! Failed to load product. Please try again later." />
         )}
+
         {product && <SingleProduct product={product} />}
       </section>
     </Page>

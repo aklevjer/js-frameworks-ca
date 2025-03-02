@@ -1,5 +1,15 @@
 import CartItem from "../CartItem";
 
+/**
+ * Displays a cart review as a table with cart items and a total price.
+ *
+ * @component
+ * @param {Object} props - The properties passed to the component.
+ * @param {Object[]} props.cart - An array of cart item objects.
+ * @param {string} props.total - The total price of all cart items as a formatted string.
+ *
+ * @returns {JSX.Element} The rendered cart review component.
+ */
 export default function CartReview({ cart, total }) {
   return (
     <section className="md:col-span-8">

@@ -3,6 +3,15 @@ import { getDiscountPercent } from "../../../utils/product/getDiscountPercent";
 import { formatPrice } from "../../../utils/misc/formatPrice";
 import Button from "../../ui/Button";
 
+/**
+ * Displays details of a product in card format.
+ *
+ * @component
+ * @param {Object} props - The properties passed to the component.
+ * @param {Object} props.product - The product data.
+ *
+ * @returns {JSX.Element} The rendered product card component.
+ */
 export default function ProductCard({ product }) {
   const { id, title, price, discountedPrice, image } = product;
 

@@ -6,6 +6,12 @@ import {
 } from "react-icons/bi";
 import Logo from "../../ui/Logo";
 
+/**
+ * Renders a footer with a logo, social media links, and copyright information.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered footer component.
+ */
 export default function Footer() {
   const socialLinks = [
     { label: "Facebook", icon: BiLogoFacebookSquare },

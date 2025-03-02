@@ -8,6 +8,12 @@ import Loader from "../../components/ui/Loader";
 import Alert from "../../components/ui/Alert";
 import SingleProduct from "../../components/product/SingleProduct";
 
+/**
+ * Renders the Product Details page, displaying information about a specific product.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered product details page component.
+ */
 export default function ProductDetails() {
   const { id } = useParams();
   const { product, isLoading, isError } = useProductById(id);

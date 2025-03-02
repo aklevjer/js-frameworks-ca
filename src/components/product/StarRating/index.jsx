@@ -1,6 +1,15 @@
 import { BiStar, BiSolidStar, BiSolidStarHalf } from "react-icons/bi";
 import { getRatingStars } from "../../../utils/product/getRatingStars";
 
+/**
+ * Displays rating stars along with a numeric rating label.
+ *
+ * @component
+ * @param {Object} props - The properties passed to the component.
+ * @param {number} props.rating - The rating number (between 0 and 5).
+ *
+ * @returns {JSX.Element} The rendered star rating component.
+ */
 export default function StarRating({ rating }) {
   const stars = getRatingStars(rating);
 

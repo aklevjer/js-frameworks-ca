@@ -1,5 +1,16 @@
 import { BiSearchAlt2 } from "react-icons/bi";
 
+/**
+ * Renders a search bar component for filtering products.
+ *
+ * @component
+ * @param {Object} props - The properties passed to the component.
+ * @param {string} props.searchQuery - The current search query.
+ * @param {Function} props.onSearch - Callback function for search action.
+ * @param {boolean} props.disabled - Disables the search input if true.
+ *
+ * @returns {JSX.Element} The rendered search bar component.
+ */
 export default function SearchBar({ searchQuery, onSearch, disabled }) {
   const handleSearch = (event) => {
     const query = event.target.value;

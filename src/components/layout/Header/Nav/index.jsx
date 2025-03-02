@@ -2,6 +2,16 @@ import { useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 
+/**
+ * Displays the navigation links and closes the menu when clicking outside.
+ *
+ * @component
+ * @param {Object} props - The properties passed to the component.
+ * @param {boolean} props.isMenuOpen - Whether the mobile menu is currently open.
+ * @param {Function} props.setIsMenuOpen - Function to toggle menu visibility.
+ *
+ * @returns {JSX.Element} The rendered nav component.
+ */
 export default function Nav({ isMenuOpen, setIsMenuOpen }) {
   const navRef = useRef(null);
 

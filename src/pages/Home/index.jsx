@@ -10,6 +10,12 @@ import Loader from "../../components/ui/Loader";
 import Alert from "../../components/ui/Alert";
 import ProductList from "../../components/product/ProductList";
 
+/**
+ * Renders the Home page with search and sort functionality.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered home page component.
+ */
 export default function Home() {
   const { products, isLoading, isError } = useProducts();
   const disabledState = isLoading || isError;

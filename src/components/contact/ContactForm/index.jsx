@@ -8,6 +8,13 @@ import Textarea from "../../ui/Textarea";
 import Button from "../../ui/Button";
 import Alert from "../../ui/Alert";
 
+/**
+ * Renders a contact form that allows users to send a message with their name, email, subject, and message.
+ * Handles form validation and displays a success alert upon submission.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered contact form component.
+ */
 export default function ContactForm() {
   const { alertMessage, showAlert } = useAlert();
   const {

@@ -1,6 +1,12 @@
 import Page from "../../components/layout/Page";
 import Button from "../../components/ui/Button";
 
+/**
+ * Renders a 404 Page Not Found page with a message and a CTA button.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered 404 error page component.
+ */
 export default function NotFound() {
   return (
     <Page

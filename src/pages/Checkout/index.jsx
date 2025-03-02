@@ -6,6 +6,13 @@ import EmptyCart from "../../components/cart/EmptyCart";
 import CartReview from "../../components/cart/CartReview";
 import CartSummary from "../../components/cart/CartSummary";
 
+/**
+ * Renders the Checkout page, displaying the cart review and cart summary.
+ * If the cart is empty, it shows an empty cart message.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered checkout page component.
+ */
 export default function Checkout() {
   const { cart, getTotalPrice, getSubtotalPrice, getTotalDiscount } = useCartStore();
 

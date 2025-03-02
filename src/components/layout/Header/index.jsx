@@ -4,6 +4,13 @@ import Logo from "../../ui/Logo";
 import Nav from "./Nav";
 import MenuCart from "./MenuCart";
 
+/**
+ * Displays the promo bar, logo, navigation, and cart item count.
+ * Manages the mobile menu state and passes it to child components.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered header component.
+ */
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

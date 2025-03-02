@@ -54,7 +54,7 @@ VITE_API_URL=
 
 **To obtain and configure the API URL:**
 
-1. Visit the [Noroff API documentation](https://docs.noroff.dev/docs/v2/basic/online-shop) to find the API URL.
+1. Visit the [Noroff API documentation](https://docs.noroff.dev/docs/v2/basic/online-shop) to obtain the API URL.
 2. Use this API URL as the value for `VITE_API_URL` in the `.env` file.
 
 ### Running

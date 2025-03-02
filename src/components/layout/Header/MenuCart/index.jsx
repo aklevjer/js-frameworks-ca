@@ -2,6 +2,16 @@ import { Link } from "react-router-dom";
 import { BiMenu, BiX, BiShoppingBag } from "react-icons/bi";
 import { useCartStore } from "../../../../store/cartStore";
 
+/**
+ * Renders a mobile menu button and a cart icon with the number of items in the cart.
+ *
+ * @component
+ * @param {Object} props - The properties passed to the component.
+ * @param {boolean} props.isMenuOpen - Whether the mobile menu is currently open.
+ * @param {Function} props.setIsMenuOpen - Function to toggle menu visibility.
+ *
+ * @returns {JSX.Element} The rendered menu and cart component.
+ */
 export default function MenuCart({ isMenuOpen, setIsMenuOpen }) {
   const itemsCount = useCartStore((state) => state.getItemsCount());
 

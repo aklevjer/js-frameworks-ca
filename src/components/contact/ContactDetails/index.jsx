@@ -8,6 +8,12 @@ import {
   BiLogoYoutube,
 } from "react-icons/bi";
 
+/**
+ * Displays contact information and social media links.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered contact details component.
+ */
 export default function ContactDetails() {
   const contactMethods = [
     {

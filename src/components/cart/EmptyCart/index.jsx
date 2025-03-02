@@ -1,6 +1,12 @@
 import { BiShoppingBag } from "react-icons/bi";
 import Button from "../../ui/Button";
 
+/**
+ * Displays a message when the cart is empty with a CTA to shop.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered empty cart message component.
+ */
 export default function EmptyCart() {
   return (
     <section className="mx-auto max-w-prose space-y-4 text-center">

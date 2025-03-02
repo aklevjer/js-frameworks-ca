@@ -1,5 +1,11 @@
 import { BiSolidTruck, BiCheckShield, BiRotateLeft } from "react-icons/bi";
 
+/**
+ * Displays a promo bar with promotional content (icons and text).
+ *
+ * @component
+ * @returns {JSX.Element} The rendered promo bar component.
+ */
 export default function PromoBar() {
   const promoItems = [
     {

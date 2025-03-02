@@ -1,3 +1,13 @@
+/**
+ * Renders a sort select component for sorting products.
+ *
+ * @component
+ * @param {Object} props - The properties passed to the component.
+ * @param {Function} props.onSort - Callback function triggered on sort action.
+ * @param {boolean} props.disabled - Disables the sort select if true.
+ *
+ * @returns {JSX.Element} The rendered sort select component.
+ */
 export default function SortSelect({ onSort, disabled }) {
   const handleSort = (event) => {
     const sortOrder = event.target.value;

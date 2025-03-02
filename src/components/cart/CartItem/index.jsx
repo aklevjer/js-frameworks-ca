@@ -3,6 +3,15 @@ import { useCartStore } from "../../../store/cartStore";
 import { formatPrice } from "../../../utils/misc/formatPrice";
 import QuantityControl from "../../product/QuantityControl";
 
+/**
+ * Displays a cart item with options to adjust quantity or remove the item.
+ *
+ * @component
+ * @param {Object} props - The properties passed to the component.
+ * @param {Object} props.cartItem - The cart item data.
+ *
+ * @returns {JSX.Element} The rendered cart item component.
+ */
 export default function CartItem({ cartItem }) {
   const { increaseQuantity, decreaseQuantity, removeFromCart } = useCartStore();
   const { id, title, discountedPrice, image, quantity } = cartItem;

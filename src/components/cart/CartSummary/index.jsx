@@ -1,5 +1,16 @@
 import Button from "../../ui/Button";
 
+/**
+ * Displays a cart summary with prices and a checkout CTA.
+ *
+ * @component
+ * @param {Object} props - The properties passed to the component.
+ * @param {string} props.subtotal - The subtotal price of all cart items as a formatted string.
+ * @param {string} props.discount - The amount of discount as a formatted string.
+ * @param {string} props.total - The total price of all cart items after applying any discounts, as a formatted string.
+ *
+ * @returns {JSX.Element} The rendered cart summary component.
+ */
 export default function CartSummary({ subtotal, discount, total }) {
   return (
     <section className="md:col-span-4">

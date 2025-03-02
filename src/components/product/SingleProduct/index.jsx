@@ -11,6 +11,16 @@ import Reviews from "../Reviews";
 import Button from "../../ui/Button";
 import Alert from "../../ui/Alert";
 
+/**
+ * Displays the details of a single product.
+ * Handles adding to cart, increasing, and decreasing the quantity of a product.
+ *
+ * @component
+ * @param {Object} props - The properties passed to the component.
+ * @param {Object} props.product - The product data.
+ *
+ * @returns {JSX.Element} The rendered single product component.
+ */
 export default function SingleProduct({ product }) {
   const addToCart = useCartStore((state) => state.addToCart);
   const { quantity, increase, decrease } = useQuantity();

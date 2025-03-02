@@ -1,6 +1,16 @@
 import { BiErrorCircle, BiCheckCircle } from "react-icons/bi";
 import { twMerge } from "tailwind-merge";
 
+/**
+ * Displays a styled alert with an icon and a message.
+ *
+ * @component
+ * @param {Object} props - The properties passed to the component.
+ * @param {string} props.type - The type of alert (error, success).
+ * @param {string} props.message - The message to display in the alert.
+ *
+ * @returns {JSX.Element} The rendered alert component.
+ */
 export default function Alert({ type, message }) {
   const types = {
     error: {

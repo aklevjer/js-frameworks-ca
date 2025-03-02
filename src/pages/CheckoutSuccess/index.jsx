@@ -6,6 +6,12 @@ import { getOrderNumber } from "../../utils/misc/getOrderNumber";
 import Page from "../../components/layout/Page";
 import Button from "../../components/ui/Button";
 
+/**
+ * Renders the Checkout Success page, displaying a success message and clearing the cart.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered checkout success page component.
+ */
 export default function CheckoutSuccess() {
   const clearCart = useCartStore((state) => state.clearCart);
   const orderNumber = getOrderNumber();

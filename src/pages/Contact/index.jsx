@@ -2,6 +2,12 @@ import Page from "../../components/layout/Page";
 import ContactDetails from "../../components/contact/ContactDetails";
 import ContactForm from "../../components/contact/ContactForm";
 
+/**
+ * Renders the Contact Us page, including contact details and a form for inquiries.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered contact page component.
+ */
 export default function Contact() {
   return (
     <Page

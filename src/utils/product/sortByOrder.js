@@ -1,3 +1,11 @@
+/**
+ * Sorts the products based on the provided sort order.
+ *
+ * @param {Object[]} products - An array of product objects to be sorted.
+ * @param {string} sortOrder - The criteria to sort products by (i.e "title-asc", "price-desc").
+ *
+ * @returns {Object[]} The sorted array of products.
+ */
 export function sortByOrder(products, sortOrder) {
   return [...products].sort((a, b) => {
     switch (sortOrder) {
